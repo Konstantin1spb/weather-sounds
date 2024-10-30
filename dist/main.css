@@ -1,0 +1,14 @@
+/*!**************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!./index.css ***!
+  \**************************************************************/
+@font-face {
+	font-family: 'Roboto';
+	src: url(fc2b5060f7accec5cf74.ttf) format('truetype');
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7Q0FDQyxxQkFBcUI7Q0FDckIsK0RBQXlEO0FBQzFEOztBQUVBO0NBQ0MsaUNBQWlDO0FBQ2xDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vaW5kZXguY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2Uge1xuXHRmb250LWZhbWlseTogJ1JvYm90byc7XG5cdHNyYzogdXJsKCcuL2ZvbnRzL1JvYm90by1SZWd1bGFyLnR0ZicpIGZvcm1hdCgndHJ1ZXR5cGUnKTtcbn1cblxuYm9keSB7XG5cdGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/
