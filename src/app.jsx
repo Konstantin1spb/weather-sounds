@@ -13,6 +13,7 @@ const AppContainer = ({className}) => {
 		audioWinter.load()
 		if(audioSummer.paused) {
 			audioSummer.play()
+			audioSummer.loop = true
 			document.body.style.background = "url('./assets/summer-bg.jpg')"
 		} else {
 			audioSummer.pause()
@@ -24,6 +25,7 @@ const AppContainer = ({className}) => {
 		audioWinter.load()
 		if(audioRain.paused) {
 			audioRain.play()
+			audioRain.loop = true
 			document.body.style.background = "url('./assets/rainy-bg.jpg')"
 		} else {
 			audioRain.pause()
@@ -35,10 +37,17 @@ const AppContainer = ({className}) => {
 		audioRain.load()
 		if(audioWinter.paused) {
 			audioWinter.play()
+			audioWinter.loop = true
 			document.body.style.background = "url('./assets/winter-bg.jpg')"
 		} else {
 			audioWinter.pause()
 		}
+	}
+
+	const onVolumeChange = ({target}) => {
+		audioSummer.volume = target.value
+		audioRain.volume = target.value
+		audioWinter.volume = target.value
 	}
 
 	return(
@@ -55,11 +64,16 @@ const AppContainer = ({className}) => {
 					<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud-snow"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path><line x1="8" y1="16" x2="8.01" y2="16"></line><line x1="8" y1="20" x2="8.01" y2="20"></line><line x1="12" y1="18" x2="12.01" y2="18"></line><line x1="12" y1="22" x2="12.01" y2="22"></line><line x1="16" y1="16" x2="16.01" y2="16"></line><line x1="16" y1="20" x2="16.01" y2="20"></line></svg>
 				</div>
 			</div>
+			<input type="range" min="0" max="1" step="0.1" onChange={onVolumeChange} />
 		</main>
 	);
 };
 
 export const App = styled(AppContainer)`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	h1 {
 		text-align: center;
 		margin-top: 100px;
@@ -108,5 +122,22 @@ export const App = styled(AppContainer)`
 
 	.winter:hover {
 		box-shadow: 0 0 20px #fff;
+	}
+
+	input[type="range"] {
+		max-width: 100px;
+		height: 7px;
+		margin-top: 50px;
+		-webkit-appearance: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		background-color: #2600ff;
+		height:15px;
+		width:15px;
+		border-radius: 10px;
 	}
 `;
