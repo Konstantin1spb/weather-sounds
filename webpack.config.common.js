@@ -5,7 +5,7 @@ const path = require('path');
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
-	entry: './index.jsx',
+	entry: './index.tsx',
 	output: {
 		filename: '[name].[contenthash].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
